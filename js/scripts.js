@@ -1,6 +1,6 @@
 //random color
 function pickColor(){
-    var colorArray = ["magenta", "cyan", "yellow", "white"];
+    var colorArray = ["#FA00FF", "#00CCFF", "#FF8F00", "white"];
     return colorArray[Math.floor(Math.random() * colorArray.length)];
 }
 
