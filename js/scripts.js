@@ -1,3 +1,5 @@
+var x=0; //increment to cap dots
+
 //random color
 function pickColor(){
     var colorArray = ["#FA00FF", "#00CCFF", "#FF8F00", "white"];
@@ -23,7 +25,8 @@ function addSquare(){
 }
 
 $(document).keydown(function(e) {
-    if(e.which == 32) {
+    if(e.which == 32 && x < 1500) {
       addSquare();
+      x = x + 1;
     }
 });
