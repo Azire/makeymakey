@@ -2,10 +2,42 @@ body{
   background-color: #0e0e0e;
 }
 
+p{
+  width: 800px;
+  height: 800px;
+  position: absolute;
+  border-radius: 400px;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  margin: auto;
+}
+
 div {
     position:absolute;
     width:20px;
     height:20px;
     border-radius: 10px;
-    opacity: 1;
+    opacity: .9;
+
+    -webkit-animation: pulse 2s ease-in alternate infinite;
+    -moz-animation: pulse 2s ease-in alternate infinite;
+    animation: pulse 2s ease-in alternate infinite;
+}
+
+@-webkit-keyframes pulse {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@-moz-keyframes pulse {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
 }

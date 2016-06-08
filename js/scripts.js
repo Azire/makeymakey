@@ -6,7 +6,7 @@ function pickColor(){
 
 ///random placement
 function pickPos(){
-    return Math.floor((Math.random()*800)+100) + "px";
+    return Math.floor((Math.random()*800)) + "px";
 }
 
 function addSquare(){
@@ -19,7 +19,7 @@ function addSquare(){
     div.style.left=pickPos();
     div.style.top=pickPos();
 
-    $("body").append(div);
+    $("p").append(div);
 }
 
 $(document).keydown(function(e) {
