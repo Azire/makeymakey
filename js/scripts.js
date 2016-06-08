@@ -1,4 +1,5 @@
 var x=0; //increment to cap dots
+var max=500;
 
 //random color
 function pickColor(){
@@ -25,8 +26,12 @@ function addSquare(){
 }
 
 $(document).keydown(function(e) {
-    if(e.which == 32 && x < 1500) {
+    if(e.which == 32 && x < max) {
       addSquare();
       x = x + 1;
+    }
+    if(e.which == 32 && x == max) {
+      $("div").first().remove();
+      addSquare();
     }
 });
